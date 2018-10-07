@@ -47,10 +47,12 @@ public class main_menu {
       
       //Processes the request
       if (menu_selection.equals("1")) {
+        
+        //Close scanner
         menu_input.close();
         
         //Send user to starting location
-        geolocation.LocationLibrary(args);
+        game.main(args);
       }
       else if (menu_selection.equals("2")) {
         
