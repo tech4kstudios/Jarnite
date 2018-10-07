@@ -2,7 +2,7 @@
 package jarnite;
 
 //Import dependencies
-import java.util.*;
+import java.util.Scanner;
 
 public class commands {
 
