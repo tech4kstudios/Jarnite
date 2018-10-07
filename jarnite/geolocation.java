@@ -2,7 +2,8 @@
 package jarnite;
 
 //Import dependencies
-import java.util.*;
+import java.util.Scanner;
+import java.util.Random;
 
 public class geolocation {
 
