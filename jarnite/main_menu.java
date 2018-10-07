@@ -13,7 +13,7 @@ public class main_menu {
     //Return to menu if invalid
     boolean invalid = false;
     while (true) {
-      for (int i = 0; i < 50; ++i) System.out.println();
+      clear.c();
       
       //Creates a new scanner called MenuInput
       Scanner menu_input = new Scanner(System.in);
@@ -38,12 +38,15 @@ public class main_menu {
       System.out.println(" *  Version: JBG-0.something-alpha                                             *");
       System.out.println(" *  \u00a9 2018 | Tech4K Studios                                                    *");
       System.out.println(" *******************************************************************************");
-      if (invalid) {System.out.println("Unknown option, try again by choosing a number!");}
       //No more copyright symbol problems!
       
+      if (invalid) {
+        System.out.println("Unknown option, try again by choosing a number!");
+      }
+
       //Requests input from user
       String menu_selection = menu_input.next();
-      for (int i = 0; i < 50; ++i) System.out.println();
+      clear.c();
       
       //Processes the request
       if (menu_selection.equals("1")) {
