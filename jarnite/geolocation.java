@@ -107,11 +107,9 @@ public class geolocation {
         locationNo = locationNo + 5;
         break;
       }
-        else
-        {
-          game.invalid = true;
-          break;
-        }
+      default :
+        game.invalid = true;
+        break;
         
     }
   }

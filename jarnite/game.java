@@ -24,7 +24,7 @@ public class game {
         System.out.println("Enter command here");
         
         if (invalid) {
-          System.out.println("Invalid!");
+          System.out.println("Invalid command!");
           invalid = false;
         }
         
