@@ -2,4 +2,8 @@
 jarnite/bin
 jarnite.drjava
 .DS_Store
+<<<<<<< HEAD
 thumbs.db
+=======
+Thumbs.db
+>>>>>>> parent of 7bc85a5... Revert "Merge branch 'b' into master"
