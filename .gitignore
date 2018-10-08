@@ -1,4 +1,5 @@
 *.java~
 jarnite/bin
 jarnite.drjava
+.DS_Store
 Thumbs.db
