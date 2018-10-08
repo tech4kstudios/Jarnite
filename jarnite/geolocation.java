@@ -18,52 +18,56 @@ public class geolocation {
   static Random randomLoc = new Random();
   static int locationNo = randomLoc.nextInt(25);
   static String location = locations[locationNo];
+  static  boolean spawned = false;
   
   public static void main(String[] args) throws InterruptedException {
     
-    boolean spawned = false;
+    
     if (spawned) {
-      System.out.println("Your current location is " + geolocation.location);
+      System.out.println("Your current location is " + locations[locationNo]);
+      System.out.println("id " + geolocation.locationNo);
       
     }
     else
     {
-      System.out.println("You have spawned at " + geolocation.location);
+      System.out.println("You have spawned at " + locations[locationNo]);
       System.out.println("id " + geolocation.locationNo);
       
-      if (locationNo > 4) {
-        System.out.println("North: " + locations[locationNo - 5]);
-      }
-      else
-      {
-        System.out.println("No North!");
-      }
       
-      if (!String.valueOf(locationNo).contains("4") && !String.valueOf(locationNo).contains("9")) {
-        System.out.println("East: " + locations[locationNo + 1]);
-      }
-      else
-      {
-        System.out.println("No East!");
-      }
-      
-      if (!String.valueOf(locationNo).contains("5") && !String.valueOf(locationNo).contains("0")) {
-        System.out.println("West: " + locations[locationNo - 1]);
-      }
-      else
-      {
-        System.out.println("No West!");
-      }
-      
-      if (locationNo < 20) {
-        System.out.println("South: " + locations[locationNo + 5]);
-      }
-      else
-      {
-        System.out.println("No South!");
-      }
       
       spawned = true;
+    }
+    
+    if (locationNo > 4) {
+      System.out.println("North: " + locations[locationNo - 5]);
+    }
+    else
+    {
+      System.out.println("No North!");
+    }
+    
+    if (!String.valueOf(locationNo).contains("4") && !String.valueOf(locationNo).contains("9")) {
+      System.out.println("East: " + locations[locationNo + 1]);
+    }
+    else
+    {
+      System.out.println("No East!");
+    }
+    
+    if (!String.valueOf(locationNo).contains("5") && !String.valueOf(locationNo).contains("0")) {
+      System.out.println("West: " + locations[locationNo - 1]);
+    }
+    else
+    {
+      System.out.println("No West!");
+    }
+    
+    if (locationNo < 20) {
+      System.out.println("South: " + locations[locationNo + 5]);
+    }
+    else
+    {
+      System.out.println("No South!");
     }
     
   }
@@ -105,6 +109,7 @@ public class geolocation {
       }
         else
         {
+          game.invalid = true;
           break;
         }
         

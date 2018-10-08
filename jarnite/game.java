@@ -33,9 +33,6 @@ public class game {
         
         geolocation.move();
         
-        if (!invalid) {
-          break;
-        }
         break;
       }
     }
