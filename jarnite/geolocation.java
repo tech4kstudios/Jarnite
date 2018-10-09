@@ -7,37 +7,39 @@ import java.util.Random;
 
 public class geolocation {
   
-  //static 
-  
   //Sets the static starting spawn location
   //static String location = "kiren_hills";
-  
   
   //Generate random starting spawn location
   static String [] locations = {"kiren_hills","hersha_forest","mana_lake","serga_lake","trenlo_hills","surrey_hills","nimba_hills","serpa_forest", "harvey_village", "nambi_hills", "shorte_plane", "longdon_plane", "north_jen_city", "chiffley_village", "kelna_forest", "brupton_plane", "west_jen_city", "jen_city_centre", "east_jen_city", "frena_district", "pahje_district", "mika_district", "south_jen_city", "lucto_district", "yana_district"}; //Index 0 to 24
   static Random randomLoc = new Random();
   static int locationNo = randomLoc.nextInt(25);
   static String location = locations[locationNo];
-  static  boolean spawned = false;
+  
+  //Define other variables
+  static boolean spawned = false;
+  static String[] cmdsplit;
+  static String cmd1 = "";
+  static String cmd2;
+  static int move;
   
   public static void main(String[] args) throws InterruptedException {
     
-    
+    //Check if already spawned
     if (spawned) {
       System.out.println("Your current location is " + locations[locationNo]);
-      System.out.println("id " + geolocation.locationNo);
+      System.out.println("Current map id: " + geolocation.locationNo);
       
     }
     else
     {
       System.out.println("You have spawned at " + locations[locationNo]);
-      System.out.println("id " + geolocation.locationNo);
-      
-      
+      System.out.println("Current map id:  " + geolocation.locationNo);
       
       spawned = true;
     }
     
+    //Check adjacent areas
     if (locationNo > 4) {
       System.out.println("North: " + locations[locationNo - 5]);
     }
@@ -73,7 +75,24 @@ public class geolocation {
   }
   static void move() {
     
-    switch (game.cmd) {
+    cmdsplit = game.cmd.split("\\.");
+    
+    //Check if the format is something.something
+    if (cmdsplit.length != 2) {
+      game.invalid = true;
+      return;
+    }
+    
+    cmd1 = cmdsplit[0];
+    cmd2 = cmdsplit[1];
+    
+    if (!cmd1.matches("drive|sneak|sprint|walk")) {
+      game.invalid = true;
+      return;
+    }
+    
+    //Check if move is legal
+    switch (cmd2) {
       
       case "north" :
         if (locationNo > 5) {
@@ -82,10 +101,12 @@ public class geolocation {
       }
         else
         {
+          game.badmove = true;
           break;
         }
       case "east" :
         if (String.valueOf(locationNo).contains("4") || String.valueOf(locationNo).contains("9")) {
+        game.badmove = true;
         break;
       }
         else
@@ -95,6 +116,7 @@ public class geolocation {
         }
       case "west" :
         if (String.valueOf(locationNo).contains("5") || String.valueOf(locationNo).contains("0")) {
+        game.badmove = true;
         break;
       }
         else
@@ -107,9 +129,14 @@ public class geolocation {
         locationNo = locationNo + 5;
         break;
       }
+        else
+        {
+          game.badmove = true;
+          break;
+        }
       default :
         game.invalid = true;
-        break;
+        return;
         
     }
   }
