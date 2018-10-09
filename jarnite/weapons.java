@@ -43,7 +43,7 @@ public class weapons {
     MagazineQuantity = WeaponMagazineQuantity;
   }
   // Assign availability of the weapon to the variable available
-  public void WeaponAvailable(int WeaponAvailable) {
+  public void WeaponAvailable(boolean WeaponAvailable) {
     Available = WeaponAvailable;
   }
   // Assign location of the weapon to the variable location
