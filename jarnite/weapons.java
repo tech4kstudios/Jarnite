@@ -1,6 +1,9 @@
 //Define package
 package jarnite;
 
+//Import java dependencies
+import java.io.*;
+
 public class weapons {
 
   //Declare Weapon Details
@@ -8,7 +11,7 @@ public class weapons {
 	private int Quantity;
   private int Damage;
   private int MaxAmmo;
-  private int MagazineAmmo;
+  private int MagazineQuantity;
 
   private int WeaponLocation; // Will store locationID
   private boolean Available;
@@ -35,9 +38,9 @@ public class weapons {
   public void WeaponMaxAmmo(int WeaponMaxAmmo) {
     MaxAmmo = WeaponMaxAmmo;
   }
-  // Assign number of bullets available in the weapon magazine to the variable magazine-ammo
-  public void WeaponMagazineAmmo(int WeaponMagazineAmmo) {
-    MagazineAmmo = WeaponMagazineAmmo;
+  // Assign number of magazines for that weapon to the variable magazine-quantity
+  public void WeaponMagazineQuantity(int WeaponMagazineQuantity) {
+    MagazineQuantity = WeaponMagazineQuantity;
   }
   // Assign availability of the weapon to the variable available
   public void WeaponAvailable(int WeaponAvailable) {
