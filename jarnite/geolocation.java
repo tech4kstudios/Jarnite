@@ -27,52 +27,53 @@ public class geolocation {
     
     //Check if already spawned
     if (spawned) {
-      System.out.println("Your current location is " + locations[locationNo]);
-      System.out.println("Current map id: " + geolocation.locationNo);
+      System.out.println("geolocation.current = " + locations[locationNo]);
+      //System.out.println("Current map id: " + geolocation.locationNo);
       
     }
     else
     {
-      System.out.println("You have spawned at " + locations[locationNo]);
-      System.out.println("Current map id:  " + geolocation.locationNo);
+      System.out.println("geolocation.current = " + locations[locationNo]);
+      //System.out.println("Current map id:  " + geolocation.locationNo);
       
       spawned = true;
     }
     
     //Check adjacent areas
     if (locationNo > 4) {
-      System.out.println("North: " + locations[locationNo - 5]);
+      System.out.println("geolocation.north = " + locations[locationNo - 5]);
     }
     else
     {
-      System.out.println("No North!");
+      //System.out.println("No North!");
     }
     
     if (!String.valueOf(locationNo).contains("4") && !String.valueOf(locationNo).contains("9")) {
-      System.out.println("East: " + locations[locationNo + 1]);
+      System.out.println("geolocation.east = " + locations[locationNo + 1]);
     }
     else
     {
-      System.out.println("No East!");
-    }
-    
-    if (!String.valueOf(locationNo).contains("5") && !String.valueOf(locationNo).contains("0")) {
-      System.out.println("West: " + locations[locationNo - 1]);
-    }
-    else
-    {
-      System.out.println("No West!");
+      //System.out.println("No East!");
     }
     
     if (locationNo < 20) {
-      System.out.println("South: " + locations[locationNo + 5]);
+      System.out.println("geolocation.south = " + locations[locationNo + 5]);
     }
     else
     {
-      System.out.println("No South!");
+      //System.out.println("No South!");
     }
     
+    if (!String.valueOf(locationNo).contains("5") && !String.valueOf(locationNo).contains("0")) {
+      System.out.println("geolocation.west = " + locations[locationNo - 1]);
+    }
+    else
+    {
+      //System.out.println("No West!");
+    }
   }
+  
+  
   static void move() {
     
     cmdsplit = game.cmd.split("\\.");
@@ -114,16 +115,6 @@ public class geolocation {
           locationNo++;
           break;
         }
-      case "west" :
-        if (String.valueOf(locationNo).contains("5") || String.valueOf(locationNo).contains("0")) {
-        game.badmove = true;
-        break;
-      }
-        else
-        {
-          locationNo--;
-          break;
-        }
       case "south" :
         if (locationNo < 20) {
         locationNo = locationNo + 5;
@@ -132,6 +123,16 @@ public class geolocation {
         else
         {
           game.badmove = true;
+          break;
+        }
+      case "west" :
+        if (String.valueOf(locationNo).contains("5") || String.valueOf(locationNo).contains("0")) {
+        game.badmove = true;
+        break;
+      }
+        else
+        {
+          locationNo--;
           break;
         }
       default :

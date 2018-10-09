@@ -31,6 +31,9 @@ public class commands {
   }
   
   static void ListOfCommands() {
+    
+    geolocation.cmd1 = "";
+    
     //List of Commands Output
     System.out.println("");
     System.out.println(" *******************************************************************************");

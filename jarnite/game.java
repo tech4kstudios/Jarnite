@@ -41,16 +41,16 @@ public class game {
         
         geolocation.main(args);
         
-        System.out.println("Enter command here");
-        
         if (badmove) {
           System.out.println("Invalid move!");
           badmove = false;
         }
         else if (invalid) {
-          System.out.println("Invalid command, type '?' for a list of commands!!");
+          System.out.println("Unknown command, type '?' for a list of commands!");
           invalid = false;
         }
+        
+        System.out.print("geolocation.next = ");
         
         Scanner input = new Scanner(System.in);
         cmd = input.next();
@@ -69,6 +69,7 @@ public class game {
         else if (cmd.equals("inv")) {
           while (true) {
             clear.c();
+            geolocation.cmd1 = "";
             System.out.println("Inventory opened!");
             System.out.println("Type exit to exit.");
             cmd = input.next();
