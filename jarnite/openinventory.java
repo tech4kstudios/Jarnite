@@ -8,6 +8,7 @@ public class openinventory {
     Scanner input = new Scanner(System.in);
     String cmd;
     
+    //Inventory management loop
     while (true) {
       clear.c();
       geolocation.cmd1 = "";
