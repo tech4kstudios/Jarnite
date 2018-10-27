@@ -10,6 +10,7 @@ public class game {
   static String cmd;
   static boolean invalid = false;
   static boolean badmove = false;
+  //static boolean invreturn = false;
   
   public static void main(String[] args) throws InterruptedException {
     
@@ -67,17 +68,8 @@ public class game {
           }
         }
         else if (cmd.equals("inv")) {
-          while (true) {
-            clear.c();
-            geolocation.cmd1 = "";
-            System.out.println("Inventory opened!");
-            System.out.println("Type exit to exit.");
-            cmd = input.next();
-            if (cmd.equals("exit")) {
-              invalid = false;
-              break out;
-            }
-          }
+          openinventory.main(args);
+          break out;
         }
         
         geolocation.move();
