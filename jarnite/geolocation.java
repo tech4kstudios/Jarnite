@@ -27,13 +27,13 @@ public class geolocation {
     
     //Check if already spawned
     if (spawned) {
-      System.out.println("geolocation.current = " + locations[locationNo]);
+      System.out.println(" geolocation.current = " + locations[locationNo]);
       //System.out.println("Current map id: " + geolocation.locationNo);
       
     }
     else
     {
-      System.out.println("geolocation.current = " + locations[locationNo]);
+      System.out.println(" geolocation.current = " + locations[locationNo]);
       //System.out.println("Current map id:  " + geolocation.locationNo);
       
       spawned = true;
@@ -41,7 +41,7 @@ public class geolocation {
     
     //Check adjacent areas
     if (locationNo > 4) {
-      System.out.println("geolocation.north = " + locations[locationNo - 5]);
+      System.out.println(" geolocation.north = " + locations[locationNo - 5]);
     }
     else
     {
@@ -49,7 +49,7 @@ public class geolocation {
     }
     
     if (!String.valueOf(locationNo).contains("4") && !String.valueOf(locationNo).contains("9")) {
-      System.out.println("geolocation.east = " + locations[locationNo + 1]);
+      System.out.println(" geolocation.east = " + locations[locationNo + 1]);
     }
     else
     {
@@ -57,7 +57,7 @@ public class geolocation {
     }
     
     if (locationNo < 20) {
-      System.out.println("geolocation.south = " + locations[locationNo + 5]);
+      System.out.println(" geolocation.south = " + locations[locationNo + 5]);
     }
     else
     {
@@ -65,7 +65,7 @@ public class geolocation {
     }
     
     if (!String.valueOf(locationNo).contains("5") && !String.valueOf(locationNo).contains("0")) {
-      System.out.println("geolocation.west = " + locations[locationNo - 1]);
+      System.out.println(" geolocation.west = " + locations[locationNo - 1]);
     }
     else
     {

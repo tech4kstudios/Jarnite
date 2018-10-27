@@ -41,7 +41,7 @@ public class main_menu {
       //No more copyright symbol problems!
       
       if (invalid) {
-        System.out.println("Unknown option, try again by choosing a number!");
+        System.out.println(" Unknown option, try again by choosing a number!");
       }
 
       //Requests input from user
@@ -60,10 +60,10 @@ public class main_menu {
       else if (menu_selection.equals("2")) {
         
         //TODO: add instructions
-        System.out.println("TODO: add instructions");
+        System.out.println(" TODO: add instructions");
         
         //Exit to main menu prompt
-        System.out.println("Type 'menu' to exit to the Main Menu.");
+        System.out.println(" Type 'menu' to exit to the Main Menu.");
         
         //Process user input
         while (true) {
@@ -77,7 +77,7 @@ public class main_menu {
           }
           else
           {
-            System.out.println("Unknown option, try again!");
+            System.out.println(" Unknown option, try again!");
           }
         }
       }
@@ -85,7 +85,7 @@ public class main_menu {
         commands.ListOfCommands();
         
         //Exit to main menu prompt
-        System.out.println("Type 'menu' to exit to the Main Menu.");
+        System.out.println(" Type 'menu' to exit to the Main Menu.");
         
         //Process user input
         while (true) {
@@ -99,7 +99,7 @@ public class main_menu {
           }
           else
           {
-            System.out.println("Unknown option, try again!");
+            System.out.println(" Unknown option, try again!");
           }
         }
       }

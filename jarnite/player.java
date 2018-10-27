@@ -14,6 +14,7 @@ public class player {
 
       //NPC's
       String[] npcs = { "Bob", "Sharon", "Gerald" };
+      String npc = npcs[rand.nextInt(npcs.length)];
 
       //NPC Stats
       int maxNpcHealth = 80;
@@ -27,19 +28,32 @@ public class player {
       int playerHealth = 100;
       int playerAttackDamage = 35;
 
-      int space;
+      //Define Other Variables
+      int space; //deifne spacing variable
+
+      //Pre-Define Various Types of Greetings & Storylines
+      String greeting0 = " Hello! My name is " + npc + " and I would like to kill you... *smiles politely*\n";
+      String greeting1 = " Hey! I'm " + npc + "! It's nice to meet you. *handshake*\n";
+      String greeting2 = " YOU SHALL NOT PASS! *stabs stick into ground, holding it upright with right hand*\n";
+      String[] greetings = {greeting0, greeting1, greeting2};
+      int greetingNo = rand.nextInt(2);
+      String greeting = greetings[greetingNo];
 
 // ----------[ PLAYER & NPC MECHANICS ]----------
 
-      String npc = npcs[rand.nextInt(npcs.length)];
       System.out.println("\t# " + npc + " has been spotted in this location! #\n");
       //Eg:      # Sharon has been spotted in this location!
 
-      while(npcHealth > 0) {
+      //while(npcHealth > 0) {
+
+        //Print Welcome Dialogue
+        System.out.println(greeting);
+
+        // ----------[ Display Health Stats TUI Window ]----------
         System.out.println(" *******************************************************************************");
         System.out.println(" *   --[ STATS ]--                                                             *");
 
-        //Display Player Health - correctly space out TUI window
+        //Display Player Health; correctly space out TUI window
         System.out.print(" *       Health:  ");
         System.out.print(playerHealth);
           String output = Integer.toString(playerHealth);
@@ -49,7 +63,7 @@ public class player {
           }
           System.out.println("*");
 
-        //Display NPC's Health - correctly space out TUI window
+        //Display NPC's Health; correctly space out TUI window
         System.out.print(" *       ");
         System.out.print(npc);
         System.out.print("'s Health:  ");
@@ -63,7 +77,7 @@ public class player {
           System.out.println("*");
 
         System.out.println(" *******************************************************************************");
-      }
+      //}
 
   }
 
