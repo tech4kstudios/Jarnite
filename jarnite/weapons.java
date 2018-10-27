@@ -8,7 +8,7 @@ public class weapons {
 
   //Declare Weapon Details
   private String Name;
-	private int Quantity;
+ private int Quantity;
   private int Damage;
   private int MaxAmmo;
   private int MagazineQuantity;
@@ -17,13 +17,13 @@ public class weapons {
   private boolean Available;
 
  public static void main(String[] args) {
-    WeaponsList();
+    //WeaponsList();
   }
 
 // ----------[ ITEMS LIST ]----------
 
   // Sets the constructor of the class Weapon
-  public Weapon(string WeaponName) {
+  public weapons(String WeaponName) {
     this.Name = WeaponName;
   }
   // Assign quantity of weapons to the variable quantity
