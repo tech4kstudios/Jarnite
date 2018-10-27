@@ -1,4 +1,4 @@
-//Define package
+/*//Define package
 package jarnite;
 
 //Import java dependencies
@@ -120,3 +120,4 @@ public class weapons {
   }
 
 }
+*/

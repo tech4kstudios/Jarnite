@@ -20,16 +20,16 @@ public class game {
         
         if (!invalid && !badmove) {
           switch (geolocation.cmd1) {
-            case "drive":
+            case "mv-drive":
               load_mv_drive.main(args);
               break;
-            case "sneak":
+            case "mv-sneak":
               load_mv_sneak.main(args);
               break;
-            case "sprint":
+            case "mv-sprint":
               load_mv_sprint.main(args);
               break;
-            case "walk":
+            case "mv-walk":
               load_mv_walk.main(args);
               break;
             default:

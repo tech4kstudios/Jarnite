@@ -14,6 +14,4 @@ public class init {
     //main_menu.main(args);
   }
 
-
-
 }
