@@ -10,7 +10,6 @@ public class game {
   static String cmd;
   static boolean invalid = false;
   static boolean badmove = false;
-  //static boolean invreturn = false;
   
   public static void main(String[] args) throws InterruptedException {
     //Main game loop
@@ -44,15 +43,22 @@ public class game {
         geolocation.main(args);
         
         if (badmove) {
-          System.out.println("Invalid move!");
+          System.out.println(" Invalid move!");
           badmove = false;
+          break;
         }
         else if (invalid) {
-          System.out.println("Unknown command, type '?' for a list of commands!");
+          System.out.println(" Unknown command, type '?' for a list of commands!");
           invalid = false;
+          break;
         }
-        //Asks user for next command.
-        System.out.print("geolocation.next = ");
+        
+        //Item & weapon random spawn
+        
+        
+        
+        //----------Asks user for next command.
+        System.out.print(" geolocation.next = ");
         
         Scanner input = new Scanner(System.in);
         cmd = input.next();
@@ -61,7 +67,7 @@ public class game {
         if (cmd.equals("?")) {
           while (true) {
             commands.ListOfCommands();
-            System.out.println("Type exit to exit.");
+            System.out.println(" Type exit to exit.");
             cmd = input.next();
             if (cmd.equals("exit")) {
               invalid = false;
@@ -71,12 +77,13 @@ public class game {
         }
         //If user requests inventory
         else if (cmd.equals("inv")) {
-          openinventory.main(args);
+          open_inventory.main(args);
           break out;
         }
         //Perform move
         geolocation.move();
         
+        //Back to the beginning!
         break;
         
       }
