@@ -63,7 +63,7 @@ public class main_menu {
         System.out.println(" TODO: add instructions");
         
         //Exit to main menu prompt
-        System.out.println(" Type 'menu' to exit to the Main Menu.");
+        System.out.println(" Type 'back' to exit to the Main Menu.");
         
         //Process user input
         while (true) {
@@ -72,7 +72,7 @@ public class main_menu {
           String exit = menu_input.next();
           
           //Check Entered Number
-          if (exit.equals("menu")) {
+          if (exit.equals("back")) {
             main(args);
           }
           else
@@ -85,7 +85,7 @@ public class main_menu {
         commands.ListOfCommands();
         
         //Exit to main menu prompt
-        System.out.println(" Type 'menu' to exit to the Main Menu.");
+        System.out.println(" Type 'back' to exit to the Main Menu.");
         
         //Process user input
         while (true) {
@@ -94,7 +94,7 @@ public class main_menu {
           String exit = menu_input.next();
           
           //Check Entered Number
-          if (exit.equals("menu")) {
+          if (exit.equals("back")) {
             main(args);
           }
           else

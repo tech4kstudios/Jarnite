@@ -45,12 +45,10 @@ public class game {
         if (badmove) {
           System.out.println(" Invalid move!");
           badmove = false;
-          break;
         }
         else if (invalid) {
-          System.out.println(" Unknown command, type '?' for a list of commands!");
+          System.out.println("\n Unknown command, type '?' for a list of commands!\n");
           invalid = false;
-          break;
         }
         
         //Item & weapon random spawn
@@ -67,9 +65,9 @@ public class game {
         if (cmd.equals("?")) {
           while (true) {
             commands.ListOfCommands();
-            System.out.println(" Type exit to exit.");
+            System.out.println(" Type 'back' to return to previous screen.");
             cmd = input.next();
-            if (cmd.equals("exit")) {
+            if (cmd.equals("back")) {
               invalid = false;
               break out;
             }

@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class commands {
   
   public static void main(String[] args) {
-    System.out.println("Enter command"); //Used for testing purposes
+    System.out.println(" Enter command"); //Used for testing purposes
   }
   
 // ----------[ COMMANDS ]----------
@@ -17,7 +17,7 @@ public class commands {
     Scanner helper_input = new Scanner(System.in);
     
     //Notify user of incorrect command and check for user input
-    System.out.println("Unknown command, type '?' for a list of commands!");
+    System.out.println(" Unknown command, type '?' for a list of commands!");
     String helper_cmd = helper_input.next();
     
     //Process user input and provide respose

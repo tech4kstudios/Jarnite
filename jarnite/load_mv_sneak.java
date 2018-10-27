@@ -5,7 +5,7 @@ public class load_mv_sneak {
 
     public static void main(String[] args) throws InterruptedException {
       //Convert chars to array
-      String message = "[----------------------------------------]";
+      String message = " [----------------------------------------]";
       char[] chars = message.toCharArray();
 
       //Print a char from the array, then sleep for specified time

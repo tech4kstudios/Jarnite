@@ -31,7 +31,7 @@ public class open_inventory {
       System.out.println("6. ");
 
       cmd = input.next();
-      if (cmd.equals("exit")) {
+      if (cmd.equals("back")) {
         game.invalid = false;
         break;
       }
