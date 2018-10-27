@@ -87,7 +87,7 @@ public class geolocation {
     cmd1 = cmdsplit[0];
     cmd2 = cmdsplit[1];
     
-    if (!cmd1.matches("drive|sneak|sprint|walk")) {
+    if (!cmd1.matches("mv-drive|mv-sneak|mv-sprint|mv-walk")) {
       game.invalid = true;
       return;
     }
