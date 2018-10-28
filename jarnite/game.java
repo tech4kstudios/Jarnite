@@ -37,7 +37,7 @@ public class game {
               break;
               
           }
-          
+          item_random_spawn.found = 0;
         }
         
         clear.c();
