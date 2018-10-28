@@ -9,7 +9,10 @@ public class init {
   public static void main(String[] args) throws InterruptedException {
     //InitWeapons();
     
+    while (true){
     main_menu.main(args);
+    }
+    
   }
   
 }

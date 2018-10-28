@@ -23,7 +23,7 @@ public class player {
   
   static boolean battleCommenced = false;
   
-  
+  static boolean die = false;
   
   
   
@@ -152,8 +152,18 @@ public class player {
          */
         
         battleCommenced = true;
+        
+        
       }
-      //}
+      
+      if (playerHealth < 1) {
+        die = true;
+      }
+      
+      else if (npcHealth < 1) {
+        System.out.println("Sucessfully killed!");
+        battleCommenced = false;
+      }
     }
   }
   static void attack() {

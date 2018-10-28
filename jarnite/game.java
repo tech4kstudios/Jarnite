@@ -12,8 +12,10 @@ public class game {
   static boolean badmove = false;
   
   public static void main(String[] args) throws InterruptedException {
+    
     //Main game loop
-    while(true){
+    game:
+      while(true){
       
       out:
         while (true) {
@@ -44,16 +46,19 @@ public class game {
         //Validates the user's move
         geolocation.main(args);
         
-          //Item & weapon random spawn
-          item_random_spawn.main(args);
-          
-          //NPC attack loop
-          //player.attack();
+        //Item & weapon random spawn
+        item_random_spawn.main(args);
         
-          //NPC loop
-          player.main(args);
-          
-          
+        //NPC attack loop
+        //player.attack();
+        
+        //NPC loop
+        player.main(args);
+        
+        if (player.die) {
+          endgame.main(args);
+        }
+        
         if (badmove) {
           System.out.println(" Invalid move!");
           badmove = false;
@@ -77,7 +82,7 @@ public class game {
             commands.ListOfCommands();
             
             System.out.println(" Type 'back' to return to previous screen.");
-              
+            
             cmd = input.next();
             if (cmd.equals("back")) {
               invalid = false;
