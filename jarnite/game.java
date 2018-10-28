@@ -18,7 +18,7 @@ public class game {
       out:
         while (true) {
         //Checks from the previous command
-        if (!invalid && !badmove) {
+        if (!invalid && !badmove || player.battleCommenced) {
           //Runs progress bars from previous command
           switch (geolocation.cmd1) {
             case "mv-drive":
@@ -71,7 +71,9 @@ public class game {
         if (cmd.equals("?")) {
           while (true) {
             commands.ListOfCommands();
+            
             System.out.println(" Type 'back' to return to previous screen.");
+              
             cmd = input.next();
             if (cmd.equals("back")) {
               invalid = false;
@@ -81,7 +83,7 @@ public class game {
         }
         //If user requests inventory
         else if (cmd.equals("inv")) {
-          open_inventory.main(args);
+          inv.open();
           break out;
         }
         //Perform move

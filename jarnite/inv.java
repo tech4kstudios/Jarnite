@@ -2,8 +2,8 @@ package jarnite;
 
 import java.util.Scanner;
 
-public class open_inventory {
-  public static void main(String[] args) throws InterruptedException {
+public class inv {
+  static void open() {
     
     Scanner input = new Scanner(System.in);
     String cmd;
@@ -30,6 +30,7 @@ public class open_inventory {
       System.out.println("5. ");
       System.out.println("6. ");
 
+      System.out.println(" Type 'back' to return to previous screen.");
       cmd = input.next();
       if (cmd.equals("back")) {
         game.invalid = false;
