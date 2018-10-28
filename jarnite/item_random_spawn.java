@@ -11,7 +11,7 @@ public class item_random_spawn {
   
   public static void main(String[] args) throws InterruptedException {
     
-    String[] item = { "","","", "", "", "", "", "", "", "", "", "xtfinderv2", "Car Keys", "Health Pack", "Ammo Crate", "Pistol Ammo", "Rifle Ammo", "Stun Gun Cartridge", "", "", "", "Baton", "Knife", "Axe", "Stun Gun", "Pistol", "AMR"};
+    String[] item = { "", "", "", "", "", "", "", "", "", "", "", "xtfinderv2", "Car Keys", "Health Pack", "Ammo Crate", "Pistol Ammo", "Rifle Ammo", "Stun Gun Cartridge", "", "", "", "Baton", "Knife", "Axe", "Stun Gun", "Pistol", "AMR"};
     
     //Random number generator
     Random rd = new Random();
