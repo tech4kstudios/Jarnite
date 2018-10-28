@@ -16,6 +16,7 @@ public class weapons {
   static int stunGunShootDamage;
   static int pistolFireDamage;
   static int amrFireDamage;
+  static int punchDamage;
 
   //NPC Damage
   static int npcAttackDamage;
