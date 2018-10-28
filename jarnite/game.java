@@ -35,12 +35,19 @@ public class game {
               break;
             default:
               break;
+              
           }
+          
         }
         
         clear.c();
         //Validates the user's move
         geolocation.main(args);
+        
+         //if (!invalid && !badmove) {
+          //Item & weapon random spawn
+          item_random_spawn.main(args);
+        //}
         
         if (badmove) {
           System.out.println(" Invalid move!");
@@ -51,12 +58,10 @@ public class game {
           invalid = false;
         }
         
-        //Item & weapon random spawn
-        
-        
         
         //----------Asks user for next command.
-        System.out.print(" geolocation.next = ");
+        //System.out.print(" geolocation.next = ");
+        System.out.print(" > ");
         
         Scanner input = new Scanner(System.in);
         cmd = input.next();
