@@ -44,11 +44,12 @@ public class game {
         //Validates the user's move
         geolocation.main(args);
         
-         //if (!invalid && !badmove) {
           //Item & weapon random spawn
           item_random_spawn.main(args);
-        //}
         
+          //NPC loop
+          player.main(args);
+          
         if (badmove) {
           System.out.println(" Invalid move!");
           badmove = false;
