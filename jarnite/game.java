@@ -92,7 +92,7 @@ public class game {
         }
         //If user requests inventory
         else if (cmd.equals("inv")) {
-          inv.open();
+          inventory.open();
           break out;
         }
         //Perform move
