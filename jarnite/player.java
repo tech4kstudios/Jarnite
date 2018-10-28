@@ -77,7 +77,7 @@ public class player {
     //12% chance of NPC showing up
     Random rd = new Random();
 
-    int r1 = rd.nextInt(11);
+    int r1 = rd.nextInt(5);
     if (r1 == 1 || battleCommenced) {
 
       //Define Story Beginning
@@ -153,11 +153,8 @@ public class player {
   }
   static void attack() {
 
-    if (!battleCommenced) {
-      game.badmove = true;
-    }
-    else
-    {
+    if (battleCommenced) {
+      
       if(game.cmd.equals("baton.attack")) {
         weapon_stats.maxNpcAttackDamage = 35;
         weapons.batonAttack();

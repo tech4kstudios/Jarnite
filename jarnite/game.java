@@ -18,7 +18,7 @@ public class game {
       out:
         while (true) {
         //Checks from the previous command
-        if (!invalid && !badmove || player.battleCommenced) {
+        if (!invalid && !badmove || !player.battleCommenced) {
           //Runs progress bars from previous command
           switch (geolocation.cmd1) {
             case "mv-drive":
@@ -49,6 +49,9 @@ public class game {
         
           //NPC loop
           player.main(args);
+          
+          //NPC attack loop
+          player.attack();
           
         if (badmove) {
           System.out.println(" Invalid move!");
