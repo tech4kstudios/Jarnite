@@ -77,7 +77,7 @@ public class player {
     //12% chance of NPC showing up
     Random rd = new Random();
 
-    int r1 = rd.nextInt(70);
+    int r1 = rd.nextInt(11);
     if (r1 == 1 || battleCommenced) {
 
       //Define Story Beginning
