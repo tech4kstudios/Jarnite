@@ -48,6 +48,7 @@ public class game {
           item_random_spawn.main(args);
           
           //NPC attack loop
+          //player.attack();
         
           //NPC loop
           player.main(args);
