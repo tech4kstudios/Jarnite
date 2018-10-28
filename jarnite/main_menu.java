@@ -50,47 +50,21 @@ public class main_menu {
       
       //Processes the request
       if (menu_selection.equals("1")) {
-        
         //Close scanner
         menu_input.close();
-        
         //Send user to starting location
         game.main(args);
       }
+      
       else if (menu_selection.equals("2")) {
-        commands.ListOfCommands();
-        
-        //Exit to main menu prompt
-        System.out.println(" Type 'back' to exit to the Main Menu.");
-        
-        //Process user input
-        while (true) {
-          
-          //Scanner checking for user input
-          String exit = menu_input.next();
-          
-          //Check Entered Number
-          if (exit.equals("back")) {
-            main(args);
-          }
-          else
-          {
-            System.out.println(" Unknown option, try again!");
-          }
-        }
-      }
-      else if (menu_selection.equals("3")) {
         instructions.GameInstructions();
-        
         //Exit to main menu prompt
         System.out.println(" Type 'back' to exit to the Main Menu.");
-        
         //Process user input
+        
         while (true) {
-          
           //Scanner checking for user input
           String exit = menu_input.next();
-          
           //Check Entered Number
           if (exit.equals("back")) {
             main(args);
@@ -100,12 +74,35 @@ public class main_menu {
             System.out.println(" Unknown option, try again!");
           }
         }
-      }
-      else if (menu_selection.equals("4")) {
         
+      }
+      
+      else if (menu_selection.equals("3")) {
+        commands.ListOfCommands();
+        //Exit to main menu prompt
+        System.out.println(" Type 'back' to exit to the Main Menu.");
+        //Process user input
+        
+        while (true) {
+          //Scanner checking for user input
+          String exit = menu_input.next();
+          //Check Entered Number
+          if (exit.equals("back")) {
+            main(args);
+          }
+          else
+          {
+            System.out.println(" Unknown option, try again!");
+          }
+        }
+        
+      }
+      
+      else if (menu_selection.equals("4")) {
         //Terminate the program
         System.exit(0);
       }
+      
       else
       {
         invalid = true;
