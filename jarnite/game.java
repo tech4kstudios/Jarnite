@@ -52,7 +52,7 @@ public class game {
         }
         
         //Item & weapon random spawn
-        
+        //item_random_spawn.main();
         
         
         //----------Asks user for next command.
